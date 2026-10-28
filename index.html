@@ -1,151 +1,1424 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101b2d">
-<title>مختبر تحولات الطاقة | إعداد المعلمة منال الطريقي</title>
-<style>
-:root{--bg:#0d1525;--panel:#17253a;--panel2:#20324a;--ink:#f6f7fb;--muted:#b9c7d9;--gold:#ffd27a;--line:#40516a;--green:#75e0ad;--red:#ff9a9a}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#243b55 0,#101b2d 55%,#090f1b 100%);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.65}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.wrap{max-width:1150px;margin:auto;padding:18px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.pill{border:1px solid #65758d;background:#111c2d;border-radius:999px;padding:8px 14px;font-size:.9rem}.hero{margin:16px 0;background:linear-gradient(125deg,#182b43,#43304b 65%,#6b472b);border:1px solid #a37b4a;border-radius:24px;padding:clamp(22px,4vw,44px);text-align:center;box-shadow:0 14px 45px #0005}.eyebrow{color:var(--gold);letter-spacing:2px;font-size:.8rem}.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.2;margin:8px 0}.hero p{max-width:720px;margin:10px auto;color:#f5e9d3}.quote{border-right:4px solid var(--gold);padding:8px 16px;max-width:760px;margin:22px auto 0;color:#ffe3a0;font-weight:bold;font-size:1.08rem}.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}.stat{background:#0c1727a8;border:1px solid #ffffff26;padding:7px 13px;border-radius:12px}.progress{height:8px;background:#0b1220;border-radius:9px;overflow:hidden;max-width:450px;margin:13px auto 0}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#55d9a2,#ffd27a);transition:width .4s}.section-title{display:flex;align-items:center;gap:10px;margin:28px 0 12px;font-size:1.35rem}.section-title:after{content:"";height:1px;background:var(--line);flex:1}.intro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.info{background:var(--panel);border:1px solid var(--line);padding:15px;border-radius:16px}.info b{color:var(--gold)}.devices{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px}.device{--accent:#6ab8ff;background:linear-gradient(160deg,var(--panel),#101b2b);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 20px #0002}.device-head{padding:14px;text-align:center;border-bottom:1px solid var(--line);background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 17%,transparent),transparent)}.icon{font-size:3rem;display:block;filter:drop-shadow(0 4px 8px #0005)}.device h3{margin:4px 0;font-size:1.15rem}.device-body{padding:14px}.small{color:var(--muted);font-size:.9rem}.btn{border:1px solid #71829a;background:#253953;color:white;border-radius:11px;padding:9px 13px}.btn.primary{background:var(--accent,#304d6b);border-color:transparent;width:100%;font-weight:bold;margin-top:12px}.btn.gold{background:#684a23;border-color:#d5a85a;color:#fff2ce}.btn:disabled{opacity:.55;cursor:not-allowed}.simulation{margin-top:12px;background:#0b1422;border:1px solid var(--line);border-radius:13px;padding:12px}.energy-flow{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:12px 0}.energy-node{padding:8px 10px;border-radius:10px;background:#263b55;border:1px solid #536e8e;font-size:.88rem}.arrow{color:var(--gold);font-weight:bold}.meter{height:9px;background:#344256;border-radius:8px;overflow:hidden;margin:12px 0}.meter span{display:block;width:0;height:100%;background:var(--accent);transition:width .6s}.question{font-weight:bold;margin:12px 0 6px}.answers{display:grid;gap:7px}.answer{width:100%;text-align:right;border:1px solid var(--line);background:#1a2a40;color:var(--ink);padding:10px;border-radius:10px}.answer.good{background:#173d35;border-color:#55d9a2}.answer.bad{background:#48272d;border-color:#ff9a9a}.feedback{font-size:.9rem;margin-top:9px;min-height:25px}.correct-text{color:var(--green)}.wrong-text{color:var(--red)}.challenge{background:linear-gradient(120deg,#182b43,#2d263c);border:1px solid #79618b;border-radius:18px;padding:18px}.challenge[hidden]{display:none}.footer{text-align:center;color:var(--muted);padding:25px 10px}.toast{min-height:24px;color:var(--gold);font-weight:bold}.reset{margin-top:8px}.hidden{display:none!important}@media(max-width:520px){.wrap{padding:12px}.hero{border-radius:18px}.devices{grid-template-columns:1fr}.top{justify-content:center}.device-body{padding:12px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مختبر تحولات الطاقة ⚡ - إعداد المعلمة / منال الطريقي</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-/* محاكاة مرئية فعلية عند تشغيل كل جهاز */
-.visual-stage{position:relative;display:flex;align-items:center;justify-content:center;gap:14px;min-height:125px;margin:10px 0;padding:12px;border-radius:12px;background:radial-gradient(ellipse at center,#243b55,#101b2b);overflow:hidden;border:1px solid #40516a}
-.visual-device{font-size:3.4rem;display:inline-block;position:relative;z-index:2}
-.visual-caption{font-size:.82rem;color:#e8eef8;text-align:center;max-width:120px}
-.visual-effects{position:absolute;inset:0;pointer-events:none;opacity:0}
-.visual-stage.active .visual-effects{opacity:1}
-.visual-stage.active .visual-device{animation:devicePulse 1s ease-in-out infinite alternate}
-.heat{position:absolute;left:24%;top:15%;font-size:1.7rem;animation:rise 1s ease-in-out infinite alternate}
-.heat.h2{left:65%;animation-delay:.3s}
-.sound{position:absolute;right:17%;top:25%;font-size:2rem;animation:sound 1s ease-out infinite}
-.wind{position:absolute;left:12%;top:65%;font-size:1.6rem;animation:wind 1s linear infinite}
-.sunbeam{position:absolute;left:14%;top:12%;font-size:1.7rem;animation:beam 1s ease-in-out infinite alternate}
-.energy-bolt{position:absolute;right:18%;top:12%;font-size:1.7rem;animation:beam .7s ease-in-out infinite alternate}
-@keyframes driveAcross{from{transform:translateX(-20px)}to{transform:translateX(20px)}}
-@keyframes devicePulse{from{transform:scale(1)}to{transform:scale(1.13);filter:drop-shadow(0 0 12px #ffd27a)}}
-@keyframes rise{from{transform:translateY(18px);opacity:.25}to{transform:translateY(-8px);opacity:1}}
-@keyframes sound{from{transform:scale(.65);opacity:.3}to{transform:scale(1.3);opacity:1}}
-@keyframes wind{from{transform:translateX(0);opacity:.3}to{transform:translateX(35px);opacity:1}}
-@keyframes beam{from{opacity:.3;transform:scale(.8)}to{opacity:1;transform:scale(1.2)}}
-@media(prefers-reduced-motion:reduce){.visual-stage.active .visual-device,.heat,.sound,.wind,.sunbeam,.energy-bolt{animation:none!important}}
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        labDark: '#0b0f19',
+                        labCard: 'rgba(23, 31, 52, 0.8)',
+                        labBorder: 'rgba(99, 102, 241, 0.3)',
+                        neonBlue: '#00f0ff',
+                        neonPurple: '#a855f7',
+                        neonYellow: '#facc15',
+                        electricGreen: '#10b981'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 
-</style>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.8) 0%, #0b0f19 100%);
+            background-attachment: fixed;
+        }
+
+        /* Particle Canvas Background */
+        #bgCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a855f7;
+            border-radius: 4px;
+        }
+
+        /* Neon Glow Effects */
+        .glow-purple {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+        }
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+        }
+        .glow-yellow {
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+        }
+
+        /* Card Hover Effect */
+        .lab-card {
+            background: rgba(23, 31, 52, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .lab-card:hover {
+            border-color: rgba(0, 240, 255, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.3);
+        }
+
+        /* CSS Animations for Simulators */
+        @keyframes pulse-light {
+            0%, 100% { opacity: 0.3; transform: scale(0.95); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+        .animate-pulse-light {
+            animation: pulse-light 1.5s infinite ease-in-out;
+        }
+
+        @keyframes spin-fast {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .spin-speed-1 { animation: spin-fast 1.2s linear infinite; }
+        .spin-speed-2 { animation: spin-fast 0.6s linear infinite; }
+        .spin-speed-3 { animation: spin-fast 0.2s linear infinite; }
+
+        @keyframes sound-wave {
+            0%, 100% { transform: scale(0.8); opacity: 0.2; }
+            50% { transform: scale(1.2); opacity: 0.9; }
+        }
+        .animate-sound-wave {
+            animation: sound-wave 1s infinite ease-in-out;
+        }
+
+        @keyframes microwave-ray {
+            0% { opacity: 0.2; transform: translateY(-5px) scaleX(0.8); }
+            50% { opacity: 0.8; transform: translateY(5px) scaleX(1.1); }
+            100% { opacity: 0.2; transform: translateY(-5px) scaleX(0.8); }
+        }
+        .animate-ray {
+            animation: microwave-ray 0.8s infinite ease-in-out;
+        }
+
+        @keyframes car-move {
+            0% { transform: translateX(120%); }
+            100% { transform: translateX(-120%); }
+        }
+        .animate-car {
+            animation: car-move 4s linear infinite;
+        }
+
+        @keyframes sun-beam {
+            0% { opacity: 0.3; transform: translateY(-10px); }
+            50% { opacity: 0.9; transform: translateY(5px); }
+            100% { opacity: 0.3; transform: translateY(-10px); }
+        }
+        .animate-sun-beam {
+            animation: sun-beam 2s infinite ease-in-out;
+        }
+
+        /* Option Button States */
+        .option-btn {
+            transition: all 0.2s ease;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .option-btn:hover:not(:disabled) {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: #a855f7;
+            transform: translateX(-4px);
+        }
+        .option-btn.correct {
+            background: rgba(16, 185, 129, 0.3) !important;
+            border-color: #10b981 !important;
+            color: #6ee7b7 !important;
+        }
+        .option-btn.incorrect {
+            background: rgba(239, 68, 68, 0.3) !important;
+            border-color: #ef4444 !important;
+            color: #fca5a5 !important;
+        }
+    </style>
 </head>
-<body>
-<div class="wrap">
-  <div class="top"><span class="pill">🔬 مختبر الاستكشاف العلمي</span><span class="pill">إعداد المعلمة / منال الطريقي</span></div>
-  <header class="hero">
-    <div class="eyebrow">جرّبي • لاحظي • استنتجي</div>
-    <h1>⚡ مختبر تحوّلات الطاقة</h1>
-    <p>ادخلي عالم التجربة، شغّلي الأجهزة افتراضيًا، تتبّعي انتقال الطاقة، واكتشفي كيف تتحول من صورة إلى أخرى في حياتنا اليومية.</p>
-    <div class="quote">«لا تقيسي أثر محاولاتكِ بصغرها؛ فكل اكتشاف عظيم بدأ بسؤال، وكل عقل فضولي قادر على تغيير المستقبل»</div>
-    <div class="stats"><span class="stat">🏅 النقاط: <b id="score" dir="ltr">0</b> / 10</span><span class="stat">🧪 التجارب المكتملة: <b id="done" dir="ltr">0</b> / 10</span><span class="stat">🏆 الرتبة: <b id="rank">مستكشفة مبتدئة</b></span></div>
-    <div class="progress"><span id="progress"></span></div>
-  </header>
+<body class="relative min-h-screen text-slate-100 flex flex-col justify-between">
 
-  <h2 class="section-title">🧭 دليل المختبر</h2>
-  <div class="intro-grid">
-    <div class="info"><b>١. اختاري جهازًا</b><p class="small">افتحي إحدى محطات التجربة العشر.</p></div>
-    <div class="info"><b>٢. شغّلي المحاكاة</b><p class="small">راقبي صور الطاقة قبل التشغيل وبعده.</p></div>
-    <div class="info"><b>٣. حلّلي النتيجة</b><p class="small">اختاري التحول الصحيح لتحصلي على نقطة.</p></div>
-    <div class="info"><b>٤. افتحي التحدي</b><p class="small">أكملي المحطات العشر لفتح الاختبار الختامي.</p></div>
-  </div>
+    <!-- Particle Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
 
-  <h2 class="section-title">⚙️ محطات التجارب</h2>
-  <div class="devices" id="devices"></div>
+    <!-- Top Sticky Header & Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-labDark/80 border-b border-labBorder/50 px-4 py-3">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+            <!-- Branding -->
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neonPurple to-neonBlue flex items-center justify-center text-xl shadow-lg glow-purple">
+                    ⚡
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold bg-gradient-to-r from-neonBlue via-purple-300 to-neonYellow bg-clip-text text-transparent">
+                        مختبر تحولات الطاقة ⚡
+                    </h1>
+                    <p class="text-xs text-purple-300 font-extrabold tracking-wide">إعداد المعلمة / منال الطريقي</p>
+                </div>
+            </div>
 
-  <section id="finalChallenge" class="challenge" hidden aria-live="polite">
-    <h2 style="font-size:1.4rem;margin:0 0 5px">🏆 التحدي الختامي: خبيرة الطاقة</h2>
-    <p class="small">أجيبي عن السؤال الأخير لإكمال سجل إنجازكِ.</p>
-    <p class="question">عندما تتوقف مروحة كانت تدور، هل تختفي الطاقة التي كانت تحركها؟</p>
-    <div class="answers">
-      <button class="answer" data-final="wrong">نعم، تختفي الطاقة تمامًا.</button>
-      <button class="answer" data-final="right">لا، تنتقل الطاقة وتتحول إلى صور أخرى، مثل الحرارة والصوت.</button>
-    </div>
-    <p class="feedback" id="finalFeedback"></p>
-  </section>
-  <section class="info" style="margin-top:16px" aria-live="polite">
-    <h2 style="margin:0 0 6px">📒 سجل العالِمة</h2>
-    <p class="small">ستظهر هنا محطاتكِ التي أتممتِها ونتائجكِ.</p>
-    <div id="log" class="small">لم تُنجز أي تجربة بعد؛ اختاري أول جهاز وابدئي الاستكشاف.</div>
-    <button class="btn reset" id="reset">↻ إعادة التجارب من البداية</button>
-  </section>
-  <div class="footer">تذكّري: الطاقة لا تفنى ولا تُستحدث من العدم، بل تتحول من شكل إلى آخر.<br>مختبر تعليمي تفاعلي • إعداد المعلمة / منال الطريقي</div>
-</div>
-<script>
-(() => {
- const data = [
- {id:'microwave',name:'الميكروويف',icon:'🍲',accent:'#5ab8f4',desc:'يسخّن الطعام باستخدام الموجات الكهرومغناطيسية.',input:'طاقة كهربائية',output:'طاقة حرارية في الطعام',q:'ما التحول الأساسي للطاقة في الميكروويف؟',opts:['كهربائية إلى حرارية','كيميائية إلى حركية','ضوئية إلى صوتية'],correct:0,why:'صحيح! تستخدم الطاقة الكهربائية لتوليد موجات كهرومغناطيسية تسخّن الطعام.'},
- {id:'car',name:'السيارة',icon:'🚗',accent:'#c28bf2',desc:'تتحرك السيارة بفضل الطاقة المخزنة في الوقود.',input:'طاقة كيميائية في الوقود',output:'طاقة حركية وحرارية وصوتية',q:'ما التحول الأساسي في سيارة تعمل بالوقود؟',opts:['صوتية إلى ضوئية','كيميائية إلى حركية وحرارية','ضوئية إلى كيميائية'],correct:1,why:'أحسنتِ! تتحول الطاقة الكيميائية في الوقود إلى حركة وحرارة، وينتج صوت أيضًا.'},
- {id:'radio',name:'الراديو',icon:'📻',accent:'#f4c45e',desc:'يحوّل الإشارات الكهربائية إلى أصوات مسموعة.',input:'طاقة كهربائية',output:'طاقة صوتية',q:'ما التحول الذي يتيح للراديو إصدار الصوت؟',opts:['حرارية إلى كيميائية','حركية إلى ضوئية','كهربائية إلى صوتية'],correct:2,why:'رائع! يحوّل مكبر الصوت الطاقة الكهربائية إلى طاقة صوتية.'},
- {id:'lamp',name:'المصباح الكهربائي',icon:'💡',accent:'#82dda0',desc:'ينير المكان عند مرور التيار الكهربائي.',input:'طاقة كهربائية',output:'طاقة ضوئية وحرارية',q:'ما التحول الذي يحدث عند إضاءة المصباح؟',opts:['كهربائية إلى ضوئية وحرارية','صوتية إلى حركية','كيميائية إلى صوتية'],correct:0,why:'صحيح! تتحول الطاقة الكهربائية إلى ضوء، وينتج معها مقدار من الحرارة.'},
- {id:'fan',name:'المروحة الكهربائية',icon:'🌀',accent:'#ff86b9',desc:'تدور شفراتها لتحريك الهواء.',input:'طاقة كهربائية',output:'طاقة حركية وصوتية وحرارية',q:'ما التحول الأساسي للطاقة في المروحة؟',opts:['ضوئية إلى كيميائية','كهربائية إلى حركية','حرارية إلى صوتية'],correct:1,why:'ممتاز! تتحول الطاقة الكهربائية إلى حركة دورانية، وينتج صوت وحرارة أيضًا.'},
- {id:'blender',name:'الخلاط الكهربائي',icon:'🥤',accent:'#72c7bd',desc:'يدير الشفرات لخلط المكونات.',input:'طاقة كهربائية',output:'طاقة حركية وصوتية',q:'ما التحول الأساسي للطاقة في الخلاط؟',opts:['كهربائية إلى حركية','حرارية إلى ضوئية','صوتية إلى كيميائية'],correct:0,why:'صحيح! تتحول الطاقة الكهربائية إلى حركة الشفرات، وينتج صوت أثناء التشغيل.'},
- {id:'toaster',name:'محمصة الخبز',icon:'🍞',accent:'#f0a35b',desc:'تستخدم عناصر تسخين لتحمير الخبز.',input:'طاقة كهربائية',output:'طاقة حرارية وضوئية',q:'ما التحول الأساسي للطاقة في محمصة الخبز؟',opts:['حركية إلى كيميائية','كهربائية إلى حرارية','ضوئية إلى صوتية'],correct:1,why:'أحسنتِ! تتحول الطاقة الكهربائية في عناصر التسخين إلى طاقة حرارية.'},
- {id:'speaker',name:'مكبر الصوت',icon:'🔊',accent:'#a9a0ff',desc:'يحوّل الإشارة الكهربائية إلى صوت مسموع.',input:'طاقة كهربائية',output:'طاقة صوتية',q:'ما التحول الأساسي للطاقة في مكبر الصوت؟',opts:['كيميائية إلى ضوئية','حرارية إلى حركية','كهربائية إلى صوتية'],correct:2,why:'رائع! يحول مكبر الصوت الطاقة الكهربائية إلى اهتزازات تنتج طاقة صوتية.'},
- {id:'solar',name:'اللوح الشمسي',icon:'☀️',accent:'#e6d56d',desc:'يحوّل ضوء الشمس إلى كهرباء.',input:'طاقة ضوئية من الشمس',output:'طاقة كهربائية',q:'ما التحول الأساسي في اللوح الشمسي؟',opts:['ضوئية إلى كهربائية','صوتية إلى حرارية','كهربائية إلى كيميائية'],correct:0,why:'صحيح! تحول الخلايا الشمسية جزءًا من طاقة الضوء إلى طاقة كهربائية.'},
- {id:'hairdryer',name:'مجفف الشعر (الاستشوار)',icon:'💨',accent:'#ff9b72',desc:'يدفع الهواء ويُسخّنه لتجفيف الشعر.',input:'طاقة كهربائية',output:'طاقة حركية للهواء وحرارية',q:'ما تحوّلات الطاقة في الاستشوار أثناء تشغيله؟',opts:['كيميائية إلى ضوئية فقط','كهربائية إلى حركية وحرارية','صوتية إلى كهربائية'],correct:1,why:'أحسنتِ! تتحول الطاقة الكهربائية إلى طاقة حركية تحرّك الهواء وطاقة حرارية تسخّنه، وينتج صوت أيضًا.'}
- ];
- let score=0, completed=new Set(), answeredFinal=false;
- const $=id=>document.getElementById(id);
- function render(){
-  $('devices').innerHTML=data.map((d,i)=>`<article class="device" style="--accent:${d.accent}" id="card-${d.id}">
-   <div class="device-head"><span class="icon" aria-hidden="true">${d.icon}</span><h3>${d.name}</h3><div class="small">${d.desc}</div></div>
-   <div class="device-body"><span class="pill">${completed.has(d.id)?'✓ أُنجزت':'محطة '+(i+1)}</span>
-   <button class="btn primary" data-start="${d.id}">${completed.has(d.id)?'عرض نتائج التجربة':'▶ تشغيل التجربة'}</button>
-   <div class="simulation" id="sim-${d.id}" hidden>
-    <b>مراقبة تحوّل الطاقة</b>
-    <div class="visual-stage" id="stage-${d.id}" aria-live="polite">
-      <span class="visual-effects" aria-hidden="true">
-        <span class="heat">♨️</span><span class="heat h2">♨️</span>
-        <span class="sound">)))</span><span class="wind">➜</span>
-        <span class="sunbeam">☀️</span><span class="energy-bolt">⚡</span>
-      </span>
-      <span class="visual-device" id="visual-${d.id}" aria-hidden="true">${d.icon}</span>
-      <span class="visual-caption" id="caption-${d.id}">الجهاز متوقف — اضغطي تشغيل لمشاهدة التحول</span>
-    </div>
-    <div class="meter"><span id="meter-${d.id}"></span></div>
-    <div class="energy-flow"><span class="energy-node" id="in-${d.id}">${d.input}</span><span class="arrow">← تتحول إلى →</span><span class="energy-node" id="out-${d.id}">${d.output}</span></div>
-    <p class="small" id="observation-${d.id}">الجهاز متوقف؛ شغّليه لملاحظة التحول.</p>
-    <p class="question">${d.q}</p><div class="answers">${d.opts.map((o,j)=>`<button class="answer" data-answer="${d.id}" data-option="${j}">${['أ','ب','ج'][j]}. ${o}</button>`).join('')}</div>
-    <p class="feedback" id="feedback-${d.id}" aria-live="polite"></p>
-   </div></div></article>`).join('');
-  document.querySelectorAll('[data-start]').forEach(b=>b.addEventListener('click',()=>start(b.dataset.start)));
-  document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>answer(b.dataset.answer,+b.dataset.option,b)));
-  update();
- }
- function start(id){
-  const d=data.find(x=>x.id===id),sim=$('sim-'+id);sim.hidden=false;
-  $('meter-'+id).style.width='100%';
-  const stage=$('stage-'+id);stage.classList.add('active');
-  $('caption-'+id).textContent=`${d.input} ⟶ ${d.output}`;
-  const visual=$('visual-'+id);visual.style.animation='';
-  if(id==='car'){visual.style.animation='driveAcross 2.2s ease-in-out infinite alternate';}
-  $('observation-'+id).textContent=`شُغّل ${d.name}: لاحظي الحركة أو الضوء أو الحرارة أو الصوت الظاهر، ثم تتبّعي التحول من ${d.input} إلى ${d.output}.`;
-  if(completed.has(id)){sim.querySelectorAll('[data-answer]').forEach(b=>{b.disabled=true;b.classList.toggle('good',+b.dataset.option===d.correct)});$('feedback-'+id).textContent=d.why}
-  sim.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
- }
- function answer(id,n,button){
-  if(completed.has(id))return;
-  const d=data.find(x=>x.id===id),fb=$('feedback-'+id);
-  if(n!==d.correct){button.classList.add('bad');fb.className='feedback wrong-text';fb.textContent='🔎 ليست الإجابة الصحيحة بعد؛ فكري في مصدر الطاقة والأثر الذي ينتج عن تشغيل الجهاز، ثم حاولي مجددًا.';return}
-  completed.add(id);score++;fb.className='feedback correct-text';fb.textContent='✅ '+d.why+' حصلتِ على نقطة!';
-  document.querySelectorAll(`[data-answer="${id}"]`).forEach(b=>{b.disabled=true;if(+b.dataset.option===d.correct)b.classList.add('good')});
-  update();
- }
- function update(){
-  $('score').textContent=score;$('done').textContent=completed.size;$('progress').style.width=(completed.size/data.length*100)+'%';
-  $('rank').textContent=score===data.length?'خبيرة الطاقة':score>=3?'باحثة متميزة':score>=1?'مستكشفة نشيطة':'مستكشفة مبتدئة';
-  $('log').innerHTML=completed.size?data.filter(d=>completed.has(d.id)).map(d=>`<div style="padding:5px 0">✅ ${d.name}: ${d.input} ← ${d.output}</div>`).join(''):'لم تُنجز أي تجربة بعد؛ اختاري أول جهاز وابدئي الاستكشاف.';
-  $('finalChallenge').hidden=completed.size!==data.length;
-  data.forEach(d=>{const card=$('card-'+d.id);if(card){const pill=card.querySelector('.pill');pill.textContent=completed.has(d.id)?'✓ أُنجزت':'محطة '+(data.indexOf(d)+1);card.querySelector('[data-start]').textContent=completed.has(d.id)?'عرض نتائج التجربة':'▶ تشغيل التجربة'}});
- }
- document.querySelectorAll('[data-final]').forEach(b=>b.addEventListener('click',()=>{
-  const f=$('finalFeedback');if(b.dataset.final==='right'){f.className='feedback correct-text';f.textContent='🏆 إجابة صحيحة! الطاقة لا تفنى، بل تنتقل وتتحول. اكتمل المختبر بنجاح!';document.querySelectorAll('[data-final]').forEach(x=>x.disabled=true);answeredFinal=true}else{f.className='feedback wrong-text';f.textContent='حاولي مرة أخرى: فكري في الحرارة والصوت اللذين قد ينتجان عن الحركة.'}
- }));
- $('reset').addEventListener('click',()=>{score=0;completed=new Set();answeredFinal=false;$('finalFeedback').textContent='';render();window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
- render();
-})();
-</script>
+            <!-- Dashboard Stats & Sound Toggle -->
+            <div class="flex items-center gap-3 bg-slate-900/80 border border-purple-500/30 px-4 py-2 rounded-2xl">
+                <!-- Points -->
+                <div class="flex items-center gap-2 border-l border-slate-700 pl-3">
+                    <i class="fa-solid font-bold fa-star text-yellow-400 text-lg animate-bounce"></i>
+                    <div>
+                        <span class="text-xs text-slate-400 block">النقاط</span>
+                        <span id="scoreDisplay" class="font-bold text-neonYellow text-lg leading-none">0</span> <span class="text-xs text-slate-400">/ 100</span>
+                    </div>
+                </div>
+
+                <!-- Completed Labs -->
+                <div class="flex items-center gap-2 border-l border-slate-700 pl-3">
+                    <i class="fa-solid fa-flask-vial text-neonBlue text-lg"></i>
+                    <div>
+                        <span class="text-xs text-slate-400 block">المحطات</span>
+                        <span id="completedDisplay" class="font-bold text-neonBlue text-lg leading-none">0</span> <span class="text-xs text-slate-400">/ 10</span>
+                    </div>
+                </div>
+
+                <!-- Sound Control Button -->
+                <button id="soundToggleBtn" onclick="toggleSound()" class="p-2 rounded-xl bg-purple-900/40 border border-purple-500/40 text-purple-300 hover:text-white hover:bg-purple-600/50 transition" title="تشغيل/كتم الصوت">
+                    <i id="soundIcon" class="fa-solid fa-volume-high"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Global Progress Bar -->
+        <div class="max-w-7xl mx-auto mt-2">
+            <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden border border-purple-900/50">
+                <div id="globalProgressBar" class="bg-gradient-to-r from-neonBlue via-purple-500 to-neonYellow h-2 rounded-full transition-all duration-500 w-0"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 py-6 flex-grow w-full">
+
+        <!-- Welcome Hero Banner -->
+        <section class="relative overflow-hidden rounded-3xl p-6 md:p-8 mb-10 bg-gradient-to-r from-purple-950/70 via-slate-900/90 to-blue-950/70 border border-purple-500/30 glow-purple">
+            <div class="relative z-10 max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-300 text-xs font-semibold mb-3">
+                    <i class="fa-solid fa-microscope text-neonBlue"></i> مختبر افتراضي تفاعلي للمرحلة المتوسطة
+                </div>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-3 leading-tight">
+                    مرحبًا بكِ في عالم الطاقة! 🔬
+                </h2>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6 font-tajawal">
+                    هنا تتحول الطاقة أمام عينيكِ، وكل تجربة تكشف سرًا علميًا جديدًا. استكشفي الأجهزة، وشغّليها، واكتشفي تحولات الطاقة، واجمعي نقاطكِ لتصبحي <span class="text-neonYellow font-bold">عالمة الطاقة المبدعة!</span>
+                </p>
+                <div class="flex flex-wrap gap-4 items-center">
+                    <a href="#labGrid" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-neonPurple to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold shadow-lg glow-purple transition transform active:scale-95">
+                        <span>ابدئي رحلة الطاقة</span>
+                        <i class="fa-solid fa-circle-arrow-down"></i>
+                    </a>
+                    
+                    <!-- Badges Row -->
+                    <div class="flex items-center gap-2 mr-auto bg-slate-900/60 p-2 rounded-xl border border-slate-700/50">
+                        <span class="text-xs text-slate-400 ml-1">الأوسمة:</span>
+                        <div id="badge1" class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-500 opacity-50" title="مستكشفة الطاقة (3 أجهزة)">
+                            🔍
+                        </div>
+                        <div id="badge2" class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-500 opacity-50" title="خبيرة التحولات (7 أجهزة)">
+                            ⚡
+                        </div>
+                        <div id="badge3" class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-500 opacity-50" title="عالمة الطاقة المبدعة (10 أجهزة)">
+                            👑
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Futuristic Graphic Decor -->
+            <div class="absolute -left-10 -bottom-10 w-64 h-64 bg-neonBlue/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute right-1/2 -top-10 w-48 h-48 bg-neonPurple/10 rounded-full blur-3xl pointer-events-none"></div>
+        </section>
+
+        <!-- Lab Stations Grid (10 Stations) -->
+        <section id="labGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            
+            <!-- Card 1: Light Bulb -->
+            <div id="station-1" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">1</span>
+                            المصباح الكهربائي 💡
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة الضوء</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col items-center justify-center mb-4">
+                        <div id="bulbRays" class="absolute inset-0 bg-yellow-500/10 rounded-full blur-2xl opacity-0 transition-opacity duration-700"></div>
+                        
+                        <!-- Bulb Graphic -->
+                        <div class="relative z-10 flex flex-col items-center">
+                            <i id="bulbIcon" class="fa-solid fa-lightbulb text-6xl text-slate-600 transition-all duration-500"></i>
+                            <div class="w-8 h-4 bg-slate-700 rounded-b-md mt-1 border-t border-slate-600"></div>
+                        </div>
+
+                        <!-- Energy Flow Indicators -->
+                        <div id="bulbEnergyFlow" class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-cyan-400">طاقة مدخلة: <b class="text-white">كهربائية ⚡</b></span>
+                            <span class="text-amber-400">طاقة ناتجة: <b class="text-white">ضوئية + حرارية 💡🔥</b></span>
+                        </div>
+                    </div>
+
+                    <!-- Energy Description Box -->
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span id="bulbDesc">تحول الطاقة: تنتقل الطاقة الكهربائية عبر السلك لتسخين الفتيل، فيشع ضوءًا حراريًا.</span>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="flex gap-2 mb-5">
+                        <button id="bulbToggleBtn" onclick="toggleStation(1)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: ما تحولات الطاقة التي تحدث عند إضاءة المصباح الكهربائي؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q1-options">
+                        <!-- Options generated by JS -->
+                    </div>
+                    <div id="q1-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+            <!-- Card 2: Electric Fan -->
+            <div id="station-2" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">2</span>
+                            المروحة الكهربائية 🌀
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة الحركة</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col items-center justify-center mb-4">
+                        <div class="relative z-10 flex flex-col items-center">
+                            <!-- Fan Frame & Blades -->
+                            <div class="relative p-4 border-4 border-slate-700 rounded-full">
+                                <i id="fanBlades" class="fa-solid fa-fan text-6xl text-slate-500 transition-all"></i>
+                            </div>
+                            <div class="w-4 h-10 bg-slate-800 border-x border-slate-700"></div>
+                            <div class="w-16 h-3 bg-slate-700 rounded-t-lg"></div>
+                        </div>
+
+                        <!-- Speed Controls Bar -->
+                        <div id="fanSpeedControls" class="absolute top-2 right-2 flex gap-1 bg-slate-900/80 p-1 rounded-lg border border-slate-800 hidden">
+                            <button onclick="setFanSpeed(1)" class="px-2 py-0.5 text-xs rounded bg-slate-800 hover:bg-purple-600 text-white">سرعة 1</button>
+                            <button onclick="setFanSpeed(2)" class="px-2 py-0.5 text-xs rounded bg-slate-800 hover:bg-purple-600 text-white">سرعة 2</button>
+                            <button onclick="setFanSpeed(3)" class="px-2 py-0.5 text-xs rounded bg-slate-800 hover:bg-purple-600 text-white">سرعة 3</button>
+                        </div>
+
+                        <!-- Energy Flow Indicators -->
+                        <div class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-cyan-400">طاقة مدخلة: <b class="text-white">كهربائية ⚡</b></span>
+                            <span class="text-emerald-400">طاقة ناتجة: <b class="text-white">حركية + صوتية 🌀🔊</b></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span>تحول الطاقة: يحول المحرك الكهربائي الطاقة الكهربائية إلى طاقة حركية تدور بها الشفرات وطاقة صوتية.</span>
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <button id="fanToggleBtn" onclick="toggleStation(2)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: ما نوع الطاقة الرئيسي الذي يسبب دوران شفرات المروحة؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q2-options"></div>
+                    <div id="q2-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+            <!-- Card 3: Bread Toaster -->
+            <div id="station-3" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">3</span>
+                            محمصة الخبز 🍞
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة الحرارة</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col items-center justify-center mb-4">
+                        <div id="toasterGlow" class="absolute inset-0 bg-red-600/0 transition-all duration-700 blur-xl"></div>
+                        
+                        <div class="relative z-10 flex flex-col items-center">
+                            <!-- Bread Icon -->
+                            <div id="breadIcon" class="text-3xl text-amber-200 transition-all duration-1000 transform translate-y-2">🍞</div>
+                            <!-- Toaster Body -->
+                            <div class="w-32 h-20 bg-slate-800 border-2 border-slate-700 rounded-t-2xl flex flex-col items-center justify-center relative shadow-lg">
+                                <div id="toasterSlot" class="w-24 h-2 bg-slate-950 rounded mb-2"></div>
+                                <!-- Heating Coils Glow Lines -->
+                                <div id="heatingCoils" class="w-20 h-8 border border-slate-700 rounded flex justify-around items-center px-2">
+                                    <div class="w-1 h-6 bg-slate-600 rounded transition-colors duration-700"></div>
+                                    <div class="w-1 h-6 bg-slate-600 rounded transition-colors duration-700"></div>
+                                    <div class="w-1 h-6 bg-slate-600 rounded transition-colors duration-700"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-cyan-400">طاقة مدخلة: <b class="text-white">كهربائية ⚡</b></span>
+                            <span class="text-red-400">طاقة ناتجة: <b class="text-white">حرارية + ضوئية 🔥💡</b></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span>تحول الطاقة: تتحول الطاقة الكهربائية عبر أسلاك المقاومة إلى طاقة حرارية توهّج الخبز وتحمصه.</span>
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <button id="toasterToggleBtn" onclick="toggleStation(3)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: إلى أي نوع من الطاقة تتحول الطاقة الكهربائية بشكل أساسي في المحمصة؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q3-options"></div>
+                    <div id="q3-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+            <!-- Card 4: Car -->
+            <div id="station-4" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">4</span>
+                            السيارة التقليدية 🚗
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة الوقود الكيميائي</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col justify-end mb-4">
+                        <!-- Track Road -->
+                        <div class="w-full h-12 bg-slate-900 border-t-2 border-dashed border-slate-700 relative overflow-hidden flex items-center">
+                            <!-- Moving Car Container -->
+                            <div id="carBody" class="absolute right-0 flex items-center gap-1 transition-all duration-300">
+                                <div class="text-4xl transform -scale-x-100">🚗</div>
+                                <span id="carSmoke" class="text-xs opacity-0 transition-opacity text-slate-400">💨💨</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-4 right-4 flex items-center gap-2 bg-slate-900/80 px-3 py-1 rounded-lg border border-slate-800">
+                            <i class="fa-solid fa-gas-pump text-amber-500"></i>
+                            <span class="text-xs text-slate-300">وقود كيميائي</span>
+                        </div>
+
+                        <div class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-amber-400">طاقة مدخلة: <b class="text-white">كيميائية (وقود) ⛽</b></span>
+                            <span class="text-purple-400">طاقة ناتجة: <b class="text-white">حركية + حرارية + صوتية 🚗🔥🔊</b></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span>تحول الطاقة: يحترق الوقود لتحويل الطاقة الكيميائية المخزنة فيه إلى طاقة حركية وحرارية وصوتية.</span>
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <button id="carToggleBtn" onclick="toggleStation(4)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: ما مصدر الطاقة الكيميائية التي تتحول إلى طاقة حركية في السيارة التقليدية؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q4-options"></div>
+                    <div id="q4-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+            <!-- Card 5: Radio -->
+            <div id="station-5" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">5</span>
+                            الراديو 📻
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة الصوت</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col items-center justify-center mb-4">
+                        <div class="relative z-10 flex items-center gap-4">
+                            <!-- Radio Body -->
+                            <div class="w-36 h-24 bg-amber-900/80 border-2 border-amber-700 rounded-2xl p-2 flex flex-col justify-between shadow-lg relative">
+                                <!-- Antenna -->
+                                <div class="absolute -top-6 right-3 w-1 h-8 bg-slate-400 transform rotate-12"></div>
+                                <div class="flex justify-between items-center">
+                                    <div id="radioLed" class="w-3 h-3 rounded-full bg-red-950 border border-red-700"></div>
+                                    <div class="h-3 w-16 bg-amber-950 rounded flex items-center px-1">
+                                        <div id="radioPointer" class="w-1 h-3 bg-red-500 transition-all duration-300"></div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                    <div class="w-10 h-10 rounded-full border-2 border-slate-700 bg-slate-900 flex items-center justify-center">
+                                        <i class="fa-solid fa-compact-disc text-slate-500"></i>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="w-6 h-2 bg-slate-700 rounded-full"></div>
+                                        <div class="w-6 h-2 bg-slate-700 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sound Wave Visualizer Animation -->
+                            <div id="radioWaves" class="flex items-center gap-1 opacity-20 transition-opacity">
+                                <div class="w-1 h-6 bg-cyan-400 rounded-full animate-pulse"></div>
+                                <div class="w-1 h-10 bg-cyan-400 rounded-full animate-pulse delay-75"></div>
+                                <div class="w-1 h-14 bg-cyan-400 rounded-full animate-pulse delay-150"></div>
+                                <div class="w-1 h-8 bg-cyan-400 rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-cyan-400">طاقة مدخلة: <b class="text-white">كهربائية ⚡</b></span>
+                            <span class="text-indigo-400">طاقة ناتجة: <b class="text-white">صوتية 📻🔊</b></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span>تحول الطاقة: يستقبل الجهاز الإشارات ويحول الطاقة الكهربائية إلى اهتزازات موجية تنتج طاقة صوتية.</span>
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <button id="radioToggleBtn" onclick="toggleStation(5)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: ما صورة الطاقة الناتجة الأساسية التي نسمعها من الراديو؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q5-options"></div>
+                    <div id="q5-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+            <!-- Card 6: Microwave -->
+            <div id="station-6" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">6</span>
+                            الميكروويف 🍲
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة الكهرومغناطيسية</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col items-center justify-center mb-4">
+                        <!-- Microwave Box -->
+                        <div class="w-48 h-32 bg-slate-800 border-2 border-slate-700 rounded-xl p-2 flex gap-2 relative shadow-lg">
+                            <!-- Inside Chamber -->
+                            <div id="microChamber" class="flex-1 bg-slate-950 rounded-lg border border-slate-800 flex flex-col items-center justify-end pb-2 relative overflow-hidden transition-colors">
+                                <!-- Wave Effect Overlays -->
+                                <div id="microRays" class="absolute inset-0 flex flex-col justify-around px-2 opacity-0 transition-opacity">
+                                    <div class="h-0.5 w-full bg-purple-500/60 animate-ray"></div>
+                                    <div class="h-0.5 w-full bg-purple-500/60 animate-ray"></div>
+                                </div>
+                                <!-- Food Plate -->
+                                <div id="microPlate" class="text-2xl transition-transform">🍲</div>
+                                <div class="w-16 h-1 bg-slate-700 rounded-full mt-1"></div>
+                            </div>
+                            <!-- Panel Control -->
+                            <div class="w-10 bg-slate-900 rounded-lg flex flex-col justify-around items-center py-2 border border-slate-800">
+                                <div id="microTimer" class="w-6 h-3 bg-green-950 border border-green-700 text-[9px] text-green-400 flex items-center justify-center">00</div>
+                                <div class="w-4 h-4 rounded-full bg-slate-800 border border-slate-700"></div>
+                                <div class="w-4 h-4 rounded-full bg-slate-800 border border-slate-700"></div>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-cyan-400">طاقة مدخلة: <b class="text-white">كهربائية ⚡</b></span>
+                            <span class="text-purple-400">طاقة ناتجة: <b class="text-white">كهرومغناطيسية 📡🔥</b></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span>تحول الطاقة: تحول الطاقة الكهربائية إلى إشعاع كهرومغناطيسي يحرك جزيئات الماء داخل الطعام لتسخينه.</span>
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <button id="microToggleBtn" onclick="toggleStation(6)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: كيف تُستخدم الطاقة الكهرومغناطيسية في جهاز الميكروويف لتسخين الطعام؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q6-options"></div>
+                    <div id="q6-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+            <!-- Card 7: Blender -->
+            <div id="station-7" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">7</span>
+                            الخلاط الكهربائي 🥤
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة خلط السوائل</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col items-center justify-center mb-4">
+                        <div class="relative z-10 flex flex-col items-center">
+                            <!-- Blender Jar -->
+                            <div class="w-20 h-24 border-2 border-slate-500/50 bg-cyan-500/10 rounded-t-lg relative flex flex-col justify-end items-center overflow-hidden">
+                                <!-- Liquid Contents -->
+                                <div id="blenderLiquid" class="w-full h-12 bg-pink-500/40 transition-all duration-300 relative flex items-center justify-center">
+                                    <div id="blenderSwirl" class="text-xl transition-all duration-300">🍓</div>
+                                </div>
+                            </div>
+                            <!-- Blender Base -->
+                            <div class="w-24 h-10 bg-slate-800 border border-slate-700 rounded-b-xl flex justify-center items-center">
+                                <div id="blenderBtn" class="w-4 h-4 rounded-full bg-red-600 border border-red-400"></div>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-cyan-400">طاقة مدخلة: <b class="text-white">كهربائية ⚡</b></span>
+                            <span class="text-emerald-400">طاقة ناتجة: <b class="text-white">حركية + صوتية 🌀🔊</b></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span>تحول الطاقة: يحول المحرك الطاقة الكهربائية إلى طاقة حركية لشفرات الخلاط لخلط الأطعمة وطاقة صوتية.</span>
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <button id="blenderToggleBtn" onclick="toggleStation(7)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: ما التحول الأساسي للطاقة الذي يجعل شفرات الخلاط تدور؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q7-options"></div>
+                    <div id="q7-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+            <!-- Card 8: Loudspeaker -->
+            <div id="station-8" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">8</span>
+                            مكبر الصوت 🔊
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة الموجه الصوتية</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col items-center justify-center mb-4">
+                        <div class="relative z-10 flex items-center gap-6">
+                            <i id="speakerIcon" class="fa-solid fa-bullhorn text-5xl text-slate-600 transition-all duration-300 transform -scale-x-100"></i>
+                            
+                            <!-- Animated Sound Ripples -->
+                            <div id="speakerRipples" class="flex gap-2 opacity-20 transition-opacity">
+                                <div class="w-2 h-10 border-r-4 border-cyan-400 rounded-r-full animate-ping"></div>
+                                <div class="w-2 h-16 border-r-4 border-cyan-400 rounded-r-full animate-ping delay-100"></div>
+                                <div class="w-2 h-20 border-r-4 border-cyan-400 rounded-r-full animate-ping delay-200"></div>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-cyan-400">طاقة مدخلة: <b class="text-white">كهربائية ⚡</b></span>
+                            <span class="text-indigo-400">طاقة ناتجة: <b class="text-white">صوتية 🔊</b></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span>تحول الطاقة: يحول مكبر الصوت الإشارة الكهربائية إلى اهتزازات ميكانيكية تخلق أمواجًا صوتية مسموعة.</span>
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <button id="speakerToggleBtn" onclick="toggleStation(8)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: ما نوع الطاقة الرئيسية التي ينتجها مكبر الصوت؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q8-options"></div>
+                    <div id="q8-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+            <!-- Card 9: Solar Cell -->
+            <div id="station-9" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">9</span>
+                            الخلية الشمسية ☀️
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة الطاقة المتجددة</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col items-center justify-center mb-4">
+                        <div class="relative z-10 flex flex-col items-center gap-2">
+                            <!-- Sun Graphic -->
+                            <div id="sunGraphic" class="text-3xl text-amber-500/40 transition-all duration-500">☀️</div>
+                            <!-- Sun Beams Rays -->
+                            <div id="sunBeams" class="flex gap-4 opacity-0 transition-opacity">
+                                <span class="text-yellow-400 text-xs animate-sun-beam">↓↓</span>
+                                <span class="text-yellow-400 text-xs animate-sun-beam">↓↓</span>
+                                <span class="text-yellow-400 text-xs animate-sun-beam">↓↓</span>
+                            </div>
+                            <!-- Solar Panel -->
+                            <div class="w-36 h-16 bg-blue-950 border-2 border-blue-600 rounded-lg grid grid-cols-4 grid-rows-2 gap-1 p-1 shadow-inner">
+                                <div class="bg-blue-900 border border-blue-700 rounded"></div>
+                                <div class="bg-blue-900 border border-blue-700 rounded"></div>
+                                <div class="bg-blue-900 border border-blue-700 rounded"></div>
+                                <div class="bg-blue-900 border border-blue-700 rounded"></div>
+                                <div class="bg-blue-900 border border-blue-700 rounded"></div>
+                                <div class="bg-blue-900 border border-blue-700 rounded"></div>
+                                <div class="bg-blue-900 border border-blue-700 rounded"></div>
+                                <div class="bg-blue-900 border border-blue-700 rounded"></div>
+                            </div>
+                        </div>
+
+                        <!-- Meter Indicator -->
+                        <div id="solarMeter" class="absolute top-2 left-2 bg-slate-900/80 px-2 py-1 rounded border border-slate-800 text-[10px] text-slate-400">
+                            الكهرباء: <span id="solarVal" class="text-slate-500 font-bold">0V</span>
+                        </div>
+
+                        <div class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-amber-400">طاقة مدخلة: <b class="text-white">ضوئية (شمسية) ☀️</b></span>
+                            <span class="text-cyan-400">طاقة ناتجة: <b class="text-white">كهربائية ⚡</b></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span>تحول الطاقة: تمتص الألواح الضوئية الأشعة الشمسية وتحول الطاقة الضوئية مباشرة إلى طاقة كهربائية.</span>
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <button id="solarToggleBtn" onclick="toggleStation(9)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: ما تحول الطاقة الذي يحدث عندما تسقط أشعة الشمس على الخلية الشمسية؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q9-options"></div>
+                    <div id="q9-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+            <!-- Card 10: Flashlight -->
+            <div id="station-10" class="lab-card rounded-3xl p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3 border-b border-slate-700/60 pb-2">
+                        <h3 class="text-lg font-bold text-neonBlue flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">10</span>
+                            المصباح اليدوي 🔦
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-purple-300 border border-purple-500/30">محطة البطارية الكيميائية</span>
+                    </div>
+
+                    <!-- Visual Simulator Container -->
+                    <div class="relative h-48 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden flex flex-col items-center justify-center mb-4">
+                        <div class="relative z-10 flex items-center">
+                            <!-- Flashlight Body Cutaway -->
+                            <div class="flex items-center">
+                                <!-- Battery Slot inside -->
+                                <div class="w-24 h-10 bg-slate-800 border border-slate-700 rounded-l-lg p-1 flex items-center justify-center gap-1">
+                                    <div class="w-10 h-6 bg-amber-600 rounded text-[9px] text-white flex items-center justify-center font-bold">🔋 كيميائية</div>
+                                    <div class="w-10 h-6 bg-amber-600 rounded text-[9px] text-white flex items-center justify-center font-bold">🔋 كيميائية</div>
+                                </div>
+                                <!-- Head Torch -->
+                                <div class="w-8 h-14 bg-slate-700 rounded-r-xl border-y border-r border-slate-600 flex items-center justify-center relative">
+                                    <div id="torchBulb" class="w-3 h-3 rounded-full bg-slate-500 transition-colors duration-500"></div>
+                                </div>
+                            </div>
+                            <!-- Light Beam Cone -->
+                            <div id="torchBeam" class="w-24 h-24 bg-gradient-to-r from-yellow-300/80 to-transparent clip-path-cone opacity-0 transition-opacity duration-500 pointer-events-none" style="clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 65%);"></div>
+                        </div>
+
+                        <div class="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] px-3 py-1 bg-slate-900/80 rounded-lg border border-slate-800 opacity-60">
+                            <span class="text-amber-400">طاقة كيميائية (بطارية) 🔋</span>
+                            <span class="text-slate-300">➔ كهربائية ⚡ ➔</span>
+                            <span class="text-yellow-400">ضوئية + حرارية 💡🔥</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 mb-4 font-tajawal">
+                        <i class="fa-solid fa-circle-info text-neonBlue ml-1"></i>
+                        <span>تحول الطاقة: تتحول الطاقة الكيميائية بالبطارية إلى طاقة كهربائية عبر الدائرة، ثم إلى ضوئية وحرارية.</span>
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <button id="torchToggleBtn" onclick="toggleStation(10)" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i> تشغيل التجربة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area -->
+                <div class="border-t border-slate-800 pt-3 mt-2 bg-slate-900/40 p-3 rounded-2xl">
+                    <p class="text-sm font-semibold text-purple-200 mb-3">
+                        ❓ س: كيف تتسلسل تحولات الطاقة في المصباح اليدوي الذي يعمل بالبطارية؟
+                    </p>
+                    <div class="grid grid-cols-1 gap-2" id="q10-options"></div>
+                    <div id="q10-feedback" class="mt-2 text-xs font-semibold hidden p-2 rounded-lg text-center"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Final Celebration Modal -->
+        <div id="celebrationModal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 hidden">
+            <div class="bg-gradient-to-b from-slate-900 to-purple-950 border-2 border-neonYellow p-8 rounded-3xl max-w-lg w-full text-center shadow-2xl glow-yellow relative">
+                <div class="w-20 h-20 bg-amber-500/20 text-neonYellow rounded-full flex items-center justify-center mx-auto text-4xl mb-4 border border-neonYellow animate-bounce">
+                    👑
+                </div>
+                <h3 class="text-3xl font-extrabold text-white mb-2">مبدعة التألق! 🎉</h3>
+                <p class="text-lg text-amber-300 font-bold mb-4">
+                    تهانينا! 🎉 لقد أكملتِ جميع تجارب مختبر تحولات الطاقة، وأصبحتِ عالمة طاقة مبدعة!
+                </p>
+                <div class="bg-slate-900/80 p-4 rounded-2xl border border-purple-500/30 mb-6">
+                    <span class="text-sm text-slate-400 block mb-1">النتيجة النهائية</span>
+                    <span id="finalScore" class="text-4xl font-extrabold text-neonYellow">100</span>
+                    <span class="text-slate-400 text-lg"> / 100 نقطة</span>
+                </div>
+                <button onclick="resetLab()" class="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-neonPurple to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-lg shadow-lg glow-purple transition">
+                    <i class="fa-solid fa-rotate-right ml-2"></i> إعادة الجولة في المختبر
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Page -->
+    <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950/80 py-6 text-center text-xs text-slate-400 mt-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p>جميع الحقوق محفوظة © 2026 - مختبر تحولات الطاقة ⚡</p>
+            <p class="text-purple-300 font-black text-sm tracking-wide">إعداد وتصميم المعلمة / منال الطريقي</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic JavaScript -->
+    <script>
+        // State Management
+        let score = 0;
+        let completedStations = new Set();
+        let activeStations = {};
+        let isSoundMuted = false;
+        let audioCtx = null;
+
+        // Sound Synthesis with Web Audio API (No external sound file dependencies)
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function playSound(type) {
+            if (isSoundMuted) return;
+            try {
+                initAudio();
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                if (type === 'correct') {
+                    // Upward cheerful arpeggio
+                    const now = audioCtx.currentTime;
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(523.25, now); // C5
+                    osc.frequency.exponentialRampToValueAtTime(659.25, now + 0.1); // E5
+                    osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.2); // G5
+                    osc.frequency.exponentialRampToValueAtTime(1046.50, now + 0.3); // C6
+
+                    gain.gain.setValueAtTime(0.3, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.5);
+
+                    osc.start(now);
+                    osc.stop(now + 0.5);
+                } else if (type === 'wrong') {
+                    // Gentle wrong tone
+                    const now = audioCtx.currentTime;
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(220, now); // A3
+                    osc.frequency.setValueAtTime(196, now + 0.15); // G3
+
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+
+                    osc.start(now);
+                    osc.stop(now + 0.35);
+                } else if (type === 'click') {
+                    const now = audioCtx.currentTime;
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(400, now);
+                    gain.gain.setValueAtTime(0.1, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+
+                    osc.start(now);
+                    osc.stop(now + 0.05);
+                }
+            } catch(e) {
+                console.log('Audio playback prevented or unsupported');
+            }
+        }
+
+        function toggleSound() {
+            isSoundMuted = !isSoundMuted;
+            const soundIcon = document.getElementById('soundIcon');
+            if (isSoundMuted) {
+                soundIcon.className = 'fa-solid fa-volume-xmark text-red-400';
+            } else {
+                soundIcon.className = 'fa-solid fa-volume-high text-purple-300';
+                playSound('click');
+            }
+        }
+
+        // Quiz Questions Data Structure
+        const quizData = {
+            1: {
+                correct: 0,
+                options: [
+                    "من طاقة كهربائية إلى طاقة ضوئية وحرارية",
+                    "من طاقة كيميائية إلى طاقة ضوئية فقط",
+                    "من طاقة حركية إلى طاقة كهربائية",
+                    "من طاقة صوتية إلى طاقة حرارية"
+                ],
+                explanation: "ممتاز! التيار الكهربائي يسخن فتيل المصباح فيصدر ضوءًا وحرارة."
+            },
+            2: {
+                correct: 1,
+                options: [
+                    "الطاقة الشمسية",
+                    "الطاقة الكهربائية (التي تتحول لحركية)",
+                    "الطاقة الكيميائية",
+                    "الطاقة المغناطيسية"
+                ],
+                explanation: "رائع! المحرك يحول الكهرباء إلى حركة دوران الشفرات."
+            },
+            3: {
+                correct: 2,
+                options: [
+                    "طاقة صوتية",
+                    "طاقة كيميائية",
+                    "طاقة حرارية",
+                    "طاقة حركية"
+                ],
+                explanation: "أحسنتِ! تسخن أسلاك المقاومة بالكهرباء لتوليد حرارة محمصة الخبز."
+            },
+            4: {
+                correct: 0,
+                options: [
+                    "الوقود (البنزين/الديزل)",
+                    "الرياح",
+                    "البطارية الكهربائية",
+                    "أشعة الشمس"
+                ],
+                explanation: "صحيح جداً! يحتوي الوقود على طاقة كيميائية مخزنة تتفتت بالاحتراق."
+            },
+            5: {
+                correct: 3,
+                options: [
+                    "طاقة كيميائية",
+                    "طاقة حرارية",
+                    "طاقة ضوئية",
+                    "طاقة صوتية"
+                ],
+                explanation: "بالتأكيد! يحول الراديو الموجات والكهرباء إلى طاقة صوتية نسمعها."
+            },
+            6: {
+                correct: 1,
+                options: [
+                    "تحدث صوتًا عاليًا يطهو الطعام",
+                    "تحرك جزيئات الماء داخل الطعام فتتولد حرارة",
+                    "تفرز مادة كيميائية تجعل الطعام ساخنًا",
+                    "تضيء الميكروويف بضوء مرئي فقط"
+                ],
+                explanation: "إجابة ذكية! الأشعة تسبب اهتزاز جزيئات الماء داخل الطعام بسرعة لتسخينه."
+            },
+            7: {
+                correct: 2,
+                options: [
+                    "تحول الطاقة الحرارية إلى ضوئية",
+                    "تحول الطاقة الكيميائية إلى صوتية",
+                    "تحول الطاقة الكهربائية إلى حركية",
+                    "تحول الطاقة الضوئية إلى كيميائية"
+                ],
+                explanation: "صحيح! الكهرباء تدير المحرك الميكانيكي للشفرات."
+            },
+            8: {
+                correct: 0,
+                options: [
+                    "طاقة صوتية",
+                    "طاقة كيميائية",
+                    "طاقة نووية",
+                    "طاقة ضوئية"
+                ],
+                explanation: "أحسنتِ! مكبر الصوت يهتز لإنتاج موجات صوتية في الهواء."
+            },
+            9: {
+                correct: 3,
+                options: [
+                    "من طاقة حركية إلى طاقة حرارية",
+                    "من طاقة صوتية إلى طاقة ضوئية",
+                    "من طاقة كيميائية إلى طاقة صوتية",
+                    "من طاقة ضوئية إلى طاقة كهربائية"
+                ],
+                explanation: "رائعة! تحول الخلايا الضوئية أشعة الشمس المباشرة إلى تيار كهربائي."
+            },
+            10: {
+                correct: 1,
+                options: [
+                    "من ضوئية ➔ كيميائية ➔ كهربائية",
+                    "من كيميائية ➔ كهربائية ➔ ضوئية وحرارية",
+                    "من حركية ➔ صوتية ➔ كهربائية",
+                    "من حرارية ➔ كيميائية ➔ حركية"
+                ],
+                explanation: "مبدعة! البطارية تبدأ بتفاعل كيميائي يولد كهرباء تضيء المصباح."
+            }
+        };
+
+        // Render Quiz Questions into Cards
+        function renderQuizzes() {
+            for (let id = 1; id <= 10; id++) {
+                const container = document.getElementById(`q${id}-options`);
+                if (!container) continue;
+
+                container.innerHTML = '';
+                const data = quizData[id];
+
+                data.options.forEach((optText, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = `option-btn w-full text-right p-2.5 rounded-xl text-xs font-medium text-slate-200 border transition`;
+                    btn.innerHTML = `<span class="inline-block w-5 h-5 rounded-full bg-slate-800 text-center leading-5 text-[10px] border border-slate-700 ml-2">${index + 1}</span> ${optText}`;
+                    btn.onclick = () => checkAnswer(id, index, btn);
+                    container.appendChild(btn);
+                });
+            }
+        }
+
+        // Check Quiz Answers Function
+        function checkAnswer(stationId, selectedIndex, btnElement) {
+            playSound('click');
+            const data = quizData[stationId];
+            const feedbackEl = document.getElementById(`q${stationId}-feedback`);
+            const container = document.getElementById(`q${stationId}-options`);
+            const buttons = container.querySelectorAll('button');
+
+            if (selectedIndex === data.correct) {
+                // Correct Answer Logic
+                playSound('correct');
+                btnElement.classList.add('correct');
+                
+                // Disable all buttons for this station
+                buttons.forEach(b => b.disabled = true);
+
+                feedbackEl.className = "mt-2 text-xs font-semibold p-2.5 rounded-xl text-center bg-emerald-950/80 border border-emerald-500 text-emerald-300 block animate-fade-in";
+                feedbackEl.innerHTML = `🌟 أحسنتِ يا عالمة الطاقة! إجابة صحيحة.<br><span class="font-normal opacity-90">${data.explanation}</span>`;
+
+                // Confetti Celebration
+                confetti({
+                    particleCount: 40,
+                    spread: 60,
+                    origin: { y: 0.7 }
+                });
+
+                // Update Points and Progress
+                if (!completedStations.has(stationId)) {
+                    completedStations.add(stationId);
+                    score += 10;
+                    updateDashboard();
+                }
+
+            } else {
+                // Incorrect Answer Logic
+                playSound('wrong');
+                btnElement.classList.add('incorrect');
+                btnElement.disabled = true;
+
+                feedbackEl.className = "mt-2 text-xs font-semibold p-2.5 rounded-xl text-center bg-purple-950/80 border border-purple-500/50 text-purple-200 block animate-shake";
+                feedbackEl.innerHTML = `محاولة جميلة! 💜 أعيدي التفكير في تحول الطاقة، فأنتِ قريبة من اكتشاف الإجابة.`;
+            }
+        }
+
+        // Update Global Score & Achievements
+        function updateDashboard() {
+            document.getElementById('scoreDisplay').innerText = score;
+            document.getElementById('completedDisplay').innerText = completedStations.size;
+
+            const progressPct = (completedStations.size / 10) * 100;
+            document.getElementById('globalProgressBar').style.width = `${progressPct}%`;
+
+            // Badge Unlocks
+            if (completedStations.size >= 3) {
+                const b1 = document.getElementById('badge1');
+                b1.className = "w-8 h-8 rounded-full bg-cyan-900/80 border border-cyan-400 flex items-center justify-center text-neonBlue opacity-100 shadow-lg glow-blue";
+            }
+            if (completedStations.size >= 7) {
+                const b2 = document.getElementById('badge2');
+                b2.className = "w-8 h-8 rounded-full bg-purple-900/80 border border-purple-400 flex items-center justify-center text-neonPurple opacity-100 shadow-lg glow-purple";
+            }
+            if (completedStations.size >= 10) {
+                const b3 = document.getElementById('badge3');
+                b3.className = "w-8 h-8 rounded-full bg-amber-900/80 border border-amber-400 flex items-center justify-center text-neonYellow opacity-100 shadow-lg glow-yellow";
+                
+                // Show Final Modal
+                setTimeout(() => {
+                    document.getElementById('finalScore').innerText = score;
+                    document.getElementById('celebrationModal').classList.remove('hidden');
+                    confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 } });
+                }, 800);
+            }
+        }
+
+        // Station Simulation Controls
+        function toggleStation(id) {
+            playSound('click');
+            activeStations[id] = !activeStations[id];
+            const isActive = activeStations[id];
+            const toggleBtn = document.getElementById(getToggleBtnId(id));
+
+            if (toggleBtn) {
+                if (isActive) {
+                    toggleBtn.className = "flex-1 py-2.5 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow transition";
+                    toggleBtn.innerHTML = `<i class="fa-solid fa-square ml-1"></i> إيقاف التجربة`;
+                } else {
+                    toggleBtn.className = "flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition";
+                    toggleBtn.innerHTML = `<i class="fa-solid fa-play ml-1"></i> تشغيل التجربة`;
+                }
+            }
+
+            // Station Specific Visual Reactions
+            switch(id) {
+                case 1: // Bulb
+                    const rays = document.getElementById('bulbRays');
+                    const bulbIcon = document.getElementById('bulbIcon');
+                    if (isActive) {
+                        rays.style.opacity = "1";
+                        bulbIcon.className = "fa-solid fa-lightbulb text-6xl text-yellow-300 filter drop-shadow-[0_0_25px_rgba(253,224,71,0.9)] animate-pulse-light";
+                    } else {
+                        rays.style.opacity = "0";
+                        bulbIcon.className = "fa-solid fa-lightbulb text-6xl text-slate-600 transition-all duration-500";
+                    }
+                    break;
+
+                case 2: // Fan
+                    const blades = document.getElementById('fanBlades');
+                    const controls = document.getElementById('fanSpeedControls');
+                    if (isActive) {
+                        controls.classList.remove('hidden');
+                        blades.className = "fa-solid fa-fan text-6xl text-cyan-400 spin-speed-2";
+                    } else {
+                        controls.classList.add('hidden');
+                        blades.className = "fa-solid fa-fan text-6xl text-slate-500 transition-all";
+                    }
+                    break;
+
+                case 3: // Toaster
+                    const glow = document.getElementById('toasterGlow');
+                    const bread = document.getElementById('breadIcon');
+                    const coils = document.querySelectorAll('#heatingCoils div');
+                    if (isActive) {
+                        glow.style.opacity = "1";
+                        bread.style.transform = "translateY(-12px)";
+                        bread.innerText = "🍞";
+                        coils.forEach(c => c.className = "w-1 h-6 bg-red-500 rounded shadow-[0_0_8px_#ef4444]");
+                    } else {
+                        glow.style.opacity = "0";
+                        bread.style.transform = "translateY(8px)";
+                        coils.forEach(c => c.className = "w-1 h-6 bg-slate-600 rounded transition-colors duration-700");
+                    }
+                    break;
+
+                case 4: // Car
+                    const carBody = document.getElementById('carBody');
+                    const carSmoke = document.getElementById('carSmoke');
+                    if (isActive) {
+                        carBody.classList.add('animate-car');
+                        carSmoke.style.opacity = "1";
+                    } else {
+                        carBody.classList.remove('animate-car');
+                        carSmoke.style.opacity = "0";
+                    }
+                    break;
+
+                case 5: // Radio
+                    const waves = document.getElementById('radioWaves');
+                    const led = document.getElementById('radioLed');
+                    if (isActive) {
+                        waves.style.opacity = "1";
+                        led.className = "w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]";
+                    } else {
+                        waves.style.opacity = "0.2";
+                        led.className = "w-3 h-3 rounded-full bg-red-950 border border-red-700";
+                    }
+                    break;
+
+                case 6: // Microwave
+                    const microChamber = document.getElementById('microChamber');
+                    const microRays = document.getElementById('microRays');
+                    const microPlate = document.getElementById('microPlate');
+                    const microTimer = document.getElementById('microTimer');
+                    if (isActive) {
+                        microChamber.classList.add('bg-amber-950/40');
+                        microRays.style.opacity = "1";
+                        microPlate.classList.add('spin-speed-1');
+                        microTimer.innerText = "15";
+                    } else {
+                        microChamber.classList.remove('bg-amber-950/40');
+                        microRays.style.opacity = "0";
+                        microPlate.classList.remove('spin-speed-1');
+                        microTimer.innerText = "00";
+                    }
+                    break;
+
+                case 7: // Blender
+                    const swirl = document.getElementById('blenderSwirl');
+                    const liquid = document.getElementById('blenderLiquid');
+                    if (isActive) {
+                        swirl.classList.add('spin-speed-3');
+                        liquid.classList.add('bg-pink-600');
+                    } else {
+                        swirl.classList.remove('spin-speed-3');
+                        liquid.classList.remove('bg-pink-600');
+                    }
+                    break;
+
+                case 8: // Loudspeaker
+                    const speakerIcon = document.getElementById('speakerIcon');
+                    const ripples = document.getElementById('speakerRipples');
+                    if (isActive) {
+                        speakerIcon.className = "fa-solid fa-bullhorn text-5xl text-cyan-400 filter drop-shadow-[0_0_12px_rgba(6,182,212,0.8)] transform -scale-x-100 animate-bounce";
+                        ripples.style.opacity = "1";
+                    } else {
+                        speakerIcon.className = "fa-solid fa-bullhorn text-5xl text-slate-600 transition-all duration-300 transform -scale-x-100";
+                        ripples.style.opacity = "0.2";
+                    }
+                    break;
+
+                case 9: // Solar Panel
+                    const sunBeams = document.getElementById('sunBeams');
+                    const sunGraphic = document.getElementById('sunGraphic');
+                    const solarVal = document.getElementById('solarVal');
+                    if (isActive) {
+                        sunBeams.style.opacity = "1";
+                        sunGraphic.className = "text-3xl text-yellow-300 filter drop-shadow-[0_0_15px_rgba(250,204,21,0.9)] scale-110 transition-all";
+                        solarVal.innerText = "12V ⚡";
+                        solarVal.className = "text-emerald-400 font-bold";
+                    } else {
+                        sunBeams.style.opacity = "0";
+                        sunGraphic.className = "text-3xl text-amber-500/40 transition-all duration-500";
+                        solarVal.innerText = "0V";
+                        solarVal.className = "text-slate-500 font-bold";
+                    }
+                    break;
+
+                case 10: // Flashlight
+                    const torchBeam = document.getElementById('torchBeam');
+                    const torchBulb = document.getElementById('torchBulb');
+                    if (isActive) {
+                        torchBeam.style.opacity = "1";
+                        torchBulb.className = "w-3 h-3 rounded-full bg-yellow-300 shadow-[0_0_10px_#fde047]";
+                    } else {
+                        torchBeam.style.opacity = "0";
+                        torchBulb.className = "w-3 h-3 rounded-full bg-slate-500 transition-colors duration-500";
+                    }
+                    break;
+            }
+        }
+
+        function setFanSpeed(speed) {
+            playSound('click');
+            const blades = document.getElementById('fanBlades');
+            blades.className = `fa-solid fa-fan text-6xl text-cyan-400 spin-speed-${speed}`;
+        }
+
+        function getToggleBtnId(id) {
+            const map = {
+                1: 'bulbToggleBtn',
+                2: 'fanToggleBtn',
+                3: 'toasterToggleBtn',
+                4: 'carToggleBtn',
+                5: 'radioToggleBtn',
+                6: 'microToggleBtn',
+                7: 'blenderToggleBtn',
+                8: 'speakerToggleBtn',
+                9: 'solarToggleBtn',
+                10: 'torchToggleBtn'
+            };
+            return map[id];
+        }
+
+        function resetLab() {
+            playSound('click');
+            completedStations.clear();
+            score = 0;
+            updateDashboard();
+            renderQuizzes();
+            document.getElementById('celebrationModal').classList.add('hidden');
+            
+            // Turn off all stations
+            for (let i = 1; i <= 10; i++) {
+                if (activeStations[i]) {
+                    toggleStation(i);
+                }
+            }
+        }
+
+        // Particle Background Animation Canvas
+        function initBgCanvas() {
+            const canvas = document.getElementById('bgCanvas');
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = window.innerWidth;
+            let height = canvas.height = window.innerHeight;
+
+            window.addEventListener('resize', () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            });
+
+            const particles = Array.from({ length: 45 }, () => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 2 + 0.5,
+                vx: (Math.random() - 0.5) * 0.4,
+                vy: (Math.random() - 0.5) * 0.4,
+                alpha: Math.random() * 0.5 + 0.2
+            }));
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0) p.x = width;
+                    if (p.x > width) p.x = 0;
+                    if (p.y < 0) p.y = height;
+                    if (p.y > height) p.y = 0;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(168, 85, 247, ${p.alpha})`;
+                    ctx.fill();
+                });
+
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        // Initialize App on Load
+        window.onload = function() {
+            renderQuizzes();
+            initBgCanvas();
+        };
+    </script>
 </body>
 </html>
